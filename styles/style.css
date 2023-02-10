@@ -1,0 +1,132 @@
+
+/**
+.color1 { #16c1c8 };
+.color2 { #49cccc };
+.color3 { #7cd7cf };
+.color4 { #aee1d3 };
+.color5 { #e1ecd6 };
++/
+
+*/
+
+:root{
+    --color-primary: #16c1c8
+    --color-dos:#49cccc
+    --color-tres:#7cd7cf 
+    --color-cuatro:#aee1d3 
+    --color-cinco:#aee1d3 
+}
+/* GENERAL STYLES */
+a{
+    color: inherit;
+}
+.container > .row{
+    margin-bottom: 3rem;
+}
+
+
+/* ------------ SECTIONS ------------*/
+/* ---------------> NAV*/
+
+.navbar-brand > img{
+    width: 80px;
+}
+.navbar-main .active{
+    text-decoration: underline wavy #16c1c8 ;
+    text-underline-offset: 9px;
+}
+
+/*-------> Header */
+.icons-social-networks > a{
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    transition: .5s filter;
+    
+    
+}
+
+.icons-social-networks > a:hover{
+    filter: opacity(0.5);
+}
+
+.photo-frame{
+    font-size: 20px;
+}
+.photo-frame::before, .photo-frame::after{
+    content: "";
+    display: block;
+    width: var(--box-size);
+    height: var(--box-size);
+    position: absolute;
+    z-index: -10;
+    animation: turnZ 7s linear alternate-reverse infinite;
+}
+
+.photo-frame::before{
+    --box-size: 3em;
+    background-image: radial-gradient(#7cd7cf 50%, #aee1d3 50%); 
+    top: calc(99%- (var(--box-size)/2));
+    right: calc(99%-(var(--box-size)/2));
+}
+.photo-frame::after{
+    --box-size: 5em;
+    bottom: calc(98% - (var(--box-size)/2));
+    left: calc(98% - (var(--box-size)/2));
+    background: linear-gradient(45deg,#aee1d3 45%, transparent 45% ),
+    radial-gradient(#7cd7cf 30%,#16c1c8 30% 70%, #e1ecd6 70%, transparent 70% );
+}   
+@keyframes turnZ {
+    to {
+        transform: rotate(1turn);
+    }
+}
+.header-main{
+    min-height: 100vh;
+}
+
+
+/*  -------------> Service */
+
+.icon-service{
+    --box-size: 70px;
+    width: var(--box-size);
+    height: var(--box-size);
+    padding: 10px;
+}
+
+
+
+/* --------> Portfolio */
+.main-hover{
+    transition: all 0.5s ease-in-out;
+}
+.img-hover:hover{
+    transform: scale(1.2);
+    
+}
+
+/* ---------------> Estduios */
+
+.bg-purple{
+    background-color: rgba(131, 87, 235, 0.3);
+}
+.sec-clients > a{
+    transition: filter 0.4s;
+}
+
+.sec-clients > a:hover{
+    filter: opacity(0.5);
+}
+
+@media screen and (max-width: 376px) { 
+    body{
+        margin-top: 7rem;
+    }
+    .header-main{
+        height: initial;
+    }
+    .photo-frame{
+        font-size: 9px;
+    }
+}
