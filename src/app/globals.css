@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,400&family=Domine:wght@700&family=Merriweather&family=Montserrat&family=Nunito+Sans:opsz,wght@6..12,400;6..12,800&family=Outfit:wght@400;500;700&family=Roboto+Flex:wght@500&family=Roboto:ital@0;1&family=Ubuntu&display=swap");
+html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
