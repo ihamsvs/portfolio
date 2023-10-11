@@ -72,14 +72,13 @@ const proyectos: Proyecto[] = [
   },
   {
     id: 6,
-    url: "uizard.png",
-    nombre: "UIzard Challenge ",
+    url: "pomodoro.png",
+    nombre: "Pomodoro APP ",
     descripcion:
-      "Reto de front-end de Uizard en el que se requiere consumir una API y mostrar la información en diferentes iframes, organizando los datos en función de sus IDs.",
+      "Aplicacion para poder usar la tecnica pomodoro para hacer tareas de forma eficaz. Utilizando React Native",
     stack1: "/react.svg",
-    stack2: "/next.svg",
+    stack2: "/tailwind.svg",
     stack3: "/typescript.svg",
-    stack4: "/tailwind.svg"
   },
   {
     id:7,
@@ -115,7 +114,7 @@ const Projects: React.FC = () => {
         >
           <a href="#">
             <img
-              className="rounded-t-lg"
+              className="rounded-t-lg "
               src={proyecto.url}
               alt={proyecto.nombre}
             />
